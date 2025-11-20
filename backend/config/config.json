@@ -1,1 +1,51 @@
-
+{
+  "development": {
+    "database": {
+      "host": "localhost",
+      "port": 27017,
+      "name": "smart_classroom_dev"
+    },
+    "jwt": {
+      "expiresIn": "7d",
+      "refreshExpiresIn": "30d"
+    },
+    "mqtt": {
+      "broker": "mqtt://localhost:1883",
+      "clientId": "smart_classroom_server_dev"
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379
+    }
+  },
+  "production": {
+    "database": {
+      "host": "production-db-host",
+      "port": 27017,
+      "name": "smart_classroom_prod"
+    },
+    "jwt": {
+      "expiresIn": "24h",
+      "refreshExpiresIn": "7d"
+    },
+    "mqtt": {
+      "broker": "mqtt://production-broker:1883",
+      "clientId": "smart_classroom_server_prod"
+    },
+    "redis": {
+      "host": "production-redis-host",
+      "port": 6379
+    }
+  },
+  "features": {
+    "focusMonitoring": true,
+    "healthTracking": true,
+    "emergencyAlerts": true,
+    "quizSystem": true
+  },
+  "limits": {
+    "maxStudentsPerClass": 50,
+    "maxQuizzesPerDay": 10,
+    "attendanceTimeout": 300
+  }
+}
