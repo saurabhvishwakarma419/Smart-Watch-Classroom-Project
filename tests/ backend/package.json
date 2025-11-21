@@ -1,1 +1,16 @@
-
+{
+  "name": "smart-classroom-watch-backend-tests",
+  "version": "1.0.0",
+  "description": "Backend API tests",
+  "scripts": {
+    "test": "mocha --timeout 10000 --exit",
+    "test:watch": "mocha --watch",
+    "test:coverage": "nyc mocha --timeout 10000 --exit"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.10",
+    "supertest": "^6.3.3",
+    "nyc": "^15.1.0"
+  }
+}
